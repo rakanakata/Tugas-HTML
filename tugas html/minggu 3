@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Multimedia -HTML 5</title>
+    </head>
+    <body>
+        <h2>Belajar Multimedia - HTML 5</h2>
+        <p>
+            <button onclick="playVid()" type="button">Mulai video</button>
+            <button onclick="pauseVid()"type="button">Pause video</button>
+            <button onclick="durationVid()"type="button">Durasi video</button>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/EVenZlDqsRM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </p>
+    </body>
+    <script>
+        var vid = document.getElementById("myVideo");
+
+        function durationVid(){
+            alert(vid.duration)
+        }
+
+        function playVid(){
+            vid.play();
+            vid.loop = true;
+        }
+        function pauseVid(){
+            vid.pause();
+        }
+        
+    </script>
+</html>
